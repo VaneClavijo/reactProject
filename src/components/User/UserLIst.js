@@ -27,6 +27,8 @@ const UserList = ({ users }) => {
     //Api call function
     const llamadaApi =async()=>{
         const response= await axios.get(`https://api.nasa.gov/planetary/apod?api_key=BOhQXvCGtwrrxpWp53A7l8qVCdFTY1Xo1Bs1RqZe&start_date=${search}&end_date=${search1}`)
+        console.log(response.data)
+        setPictures(response.data)
     }
 
     return (
